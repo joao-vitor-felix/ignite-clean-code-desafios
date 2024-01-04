@@ -10,22 +10,22 @@ const necessaryHeight = 130
 
 const currentHour = new Date().getHours()
 
-const parkOpen = currentHour > 9 && currentHour < 18
+const isParkOpen = currentHour > 9 && currentHour < 18
 
-if (!parkOpen) {
+if (!isParkOpen) {
   throw new Error('O parque está fechado!')
 }
 
-const ticket = user.hasTicket
+const hasUserATicket = user.hasTicket
 
-if (!ticket) {
+if (!hasUserATicket) {
   throw new Error('O Diego não possui um bilhete para entrar no parque!')
 }
 
-const enterToy = user.height > necessaryHeight
+const hasUserProperlyHeight = user.height > necessaryHeight
 
-if (!enterToy) {
+if (!hasUserProperlyHeight) {
   throw new Error('O Diego não pode entrar no brinquedo!')
-} 
+}
 
 console.log('O Diego se divertiu muito! :)')
